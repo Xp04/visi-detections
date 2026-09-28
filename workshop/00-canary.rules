@@ -1,0 +1,2 @@
+# Officer canary: curl -A visi-test http://10.66.0.20:3000/ must alert. Do not edit.
+alert http any any -> $HOME_NET any (msg:"VISI CANARY user agent visi-test"; flow:established,to_server; http.user_agent; content:"visi-test"; classtype:misc-activity; sid:9999001; rev:1;)
